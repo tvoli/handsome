@@ -32,10 +32,12 @@ export default class TableWidget extends BaseWidget {
       );
     });
 
+    var Table = require('react-bootstrap').Table;
+
     return (
       <div className={"table_widget widget w" + this.props.width + " h" + this.props.height}>
         <h1>{this.props.title}</h1>
-        <table striped bordered condensed hover>
+        <Table striped bordered condensed hover>
           <thead>
               <tr>
                 {titles}
@@ -44,7 +46,7 @@ export default class TableWidget extends BaseWidget {
           <tbody>
             {rows}
           </tbody>
-        </table>
+        </Table>
       </div>
     );
   }
