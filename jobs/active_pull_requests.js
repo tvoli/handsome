@@ -7,7 +7,7 @@ exports.promise = function(fulfill, reject) {
     if (!error && response.statusCode == 200) {
       var json = JSON.parse(body);
       var pull_requests = json['pull_request'];
-      fulfill({pull_requests: {list: pull_requests}});
+      fulfill({pull_requests: {table: pull_requests}});
     } else {
       reject(error);
     }
