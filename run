@@ -1,5 +1,4 @@
 #!/usr/bin/env bash
-#exec redis-server & npm start
 redis-server &
 pid[0]=$!
 npm start &
