@@ -1,5 +1,9 @@
 # Handsome Dashboard Framework
 
+## tvoli dashboard (fork specific information)
+
+A .env file is needed in the root with GITHUB_TOKEN='some token' to be able to start app.
+
 ## What is Handsome?
 
 Handsome is a dashboard framework written in javascript.

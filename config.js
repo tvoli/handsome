@@ -1,3 +1,4 @@
+require('dotenv').config();
 var redis = require('redis');
 
 var config = {
@@ -5,6 +6,8 @@ var config = {
   redis_server_port: process.env.REDIS_SERVER_PORT || 6379,
   redis_server_password: process.env.REDIS_SERVER_PASSWORD || undefined
 };
+
+exports.github_access_token = process.env.GITHUB_TOKEN || undefined;
 
 exports.getRedisClient = function() {
   var options = {
