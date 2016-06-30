@@ -23,7 +23,7 @@ app.get('/:dashboard', function(req, res) {
 
 app.get('/widgets/:widget.json', function(req, res) {
   redis.get(req.params.widget, function(err, reply) {
-    if(err) {
+    if(err || reply === null) {
       res.json({'error': err});
     } else {
       var reply_json = JSON.parse(reply);
